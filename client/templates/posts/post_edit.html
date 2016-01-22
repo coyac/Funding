@@ -1,0 +1,91 @@
+<template name="postEdit">
+  <form class="main form page">
+    <div class="form-group {{errorClass 'NomePork'}}">
+      <label class="control-label" for="NomePork">Nome do Porquinho!!!</label>
+      <div class="controls">
+          <input name="NomePork" id="NomePork" type="text" value="{{NomePork}}" placeholder="Your NomePork" class="form-control"/>
+          <span class="help-block">{{errorMessage 'url'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'NomeBenef'}}">
+      <label class="control-label" for="NomeBenef">Nome Beneficiario</label>
+      <div class="controls">
+          <input name="NomeBenef" id="NomeBenef" type="text" value="{{NomeBenef}}" placeholder="Name your Benef" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'FinalDate'}}">
+      <label class="control-label" for="FinalDate">Final Date</label>
+      <div class="controls">
+          <input name="FinalDate" id="FinalDate" type="text" value="{{FinalDate}}" placeholder="Final Date" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'EventType'}}">
+      <label class="control-label" for="EventType">Event Type</label>
+      <div class="controls">
+          <input name="EventType" id="EventType" type="text" value="{{EventType}}" placeholder="EventType" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'ImagePork'}}">
+      <label class="control-label" for="ImagePork">Imagem do Pork</label>
+      <div class="controls">
+          <input name="ImagePork" id="ImagePork" type="text" value="{{ImagePork}}" placeholder="Image Pork" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'PorkDescription'}}">
+      <label class="control-label" for="PorkDescription">Description do Pork</label>
+      <div class="controls">
+          <input name="PorkDescription" id="PorkDescription" type="text" value="{{PorkDescription}}" placeholder="Descreva Pork" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'TotalValue'}}">
+      <label class="control-label" for="TotalValue">Valor Total</label>
+      <div class="controls">
+          <input name="TotalValue" id="TotalValue" type="text" value="{{TotalValue}}" placeholder="Entre value total" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'SuggestedValue'}}">
+      <label class="control-label" for="SuggestedValue">Valor sugerido</label>
+      <div class="controls">
+          <input name="SuggestedValue" id="SuggestedValue" type="text" value="{{SuggestedValue}}" placeholder="Valor Sugerido" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'NomeBenef'}}">
+      <label class="control-label" for="NomeBenef">Nome Beneficiario</label>
+      <div class="controls">
+          <input name="NomeBenef" id="NomeBenef" type="text" value="{{NomeBenef}}" placeholder="Name your Benef" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'UsersEmail'}}">
+      <label class="control-label" for="UserEmail">Insira o email dos utilizadores</label>
+      <div class="controls">
+          <input name="UsersEmail" id="UsersEmail" type="text" value="{{UsersEmail}}" placeholder="Entre email" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'ShareLink'}}">
+      <label class="control-label" for="ShareLink">Partilhe o link</label>
+      <div class="controls">
+          <input name="ShareLink" id="ShareLink" type="text" value="{{ShareLink}}" placeholder="Partilhe o linkf" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'PaymentType'}}">
+      <label class="control-label" for="PaymentType">Tipo de pagamento</label>
+      <div class="controls">
+          <input name="PaymentType" id="PaymentType" type="text" value="{{PaymentType}}" placeholder="Tipo de pagamento" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Delete post</a>
+  </form>
+</template>
