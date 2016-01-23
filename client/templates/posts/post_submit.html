@@ -28,7 +28,7 @@
     <div class="form-group {{errorClass 'FinalDate'}}">
       <label class="control-label" for="FinalDate">Adicione a data de fim</label>
       <div class="controls">
-          <input name="FinalDate" id="FinalDate" type="text" value="" placeholder="Name your post" class="form-control"/>
+          <input name="FinalDate" id="FinalDate" type="numbers" value="" placeholder="Name your post" class="form-control"/>
           <span class="help-block">{{errorMessage 'title'}}</span>
       </div>
     </div>
@@ -54,15 +54,15 @@
         <div class="form-group {{errorClass 'TotalValue'}}">
       <label class="control-label" for="TotalValue">Entre com o valor total para atingir o seu objetivo</label>
       <div class="controls">
-          <input name="TotalValue" id="TotalValue" type="text" value="" placeholder="Name your post" class="form-control"/>
+          <input name="TotalValue" id="TotalValue" type="numbers" value="" placeholder="Name your post" class="form-control"/>
           <span class="help-block">{{errorMessage 'title'}}</span>
       </div>
     </div>
 
         <div class="form-group {{errorClass 'SuggestedValue'}}">
-      <label class="control-label" for="SuggestedValue">Sugerir montante por participante</label>
+      <label class="control-label" for="SuggestedValue">Sugerira um montante por participante</label>
       <div class="controls">
-          <input name="SuggestedValue" id="SuggestedValue" type="text" value="" placeholder="Name your post" class="form-control"/>
+          <input name="SuggestedValue" id="SuggestedValue" type="numbers" value="" placeholder="Name your post" class="form-control"/>
           <span class="help-block">{{errorMessage 'title'}}</span>
       </div>
     </div>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="form-group {{errorClass 'ShareLink'}}">
-      <label class="control-label" for="ShareLink">Partilhe o link</label>
+      <label class="control-label" for="ShareLink">Partilhe o link do seu Porquinho</label>
       <div class="controls">
           <input name="ShareLink" id="ShareLink" type="text" value="" placeholder="Name your post" class="form-control"/>
           <span class="help-block">{{errorMessage 'title'}}</span>
@@ -86,7 +86,7 @@
     </div>
 
         <div class="form-group {{errorClass 'PaymentType'}}">
-      <label class="control-label" for="PaymentType">Como deseja que os seus amigos o paguem</label>
+      <label class="control-label" for="PaymentType">Como deseja que os seus amigos o paguem? (Vai haver opções)</label>
       <div class="controls">
           <input name="PaymentType" id="PaymentType" type="text" value="" placeholder="Name your post" class="form-control"/>
           <span class="help-block">{{errorMessage 'title'}}</span>
