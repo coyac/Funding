@@ -1,7 +1,7 @@
 Template.postEdit.onCreated(function() {
   Session.set('postEditErrors', {});
 });
-
+//comment
 Template.postEdit.helpers({
   errorMessage: function(field) {
     return Session.get('postEditErrors')[field];
@@ -14,9 +14,9 @@ Template.postEdit.helpers({
 Template.postEdit.events({
   'submit form': function(e) {
     e.preventDefault();
-    
+
     var currentPostId = this._id;
-    
+
     var postProperties = {
       NomePork: $(e.target).find('[name=NomePork]').val(),
       NomeBenef: $(e.target).find('[name=NomeBenef]').val(),
@@ -30,11 +30,11 @@ Template.postEdit.events({
       ShareLink: $(e.target).find('[name=ShareLink]').val(),
       PaymentType: $(e.target).find('[name=PaymentType]').val()
     }
-    
+
     /*/ var errors = validatePost(postProperties);
     if (errors.title || errors.url)
       return Session.set('postEditErrors', errors); /*/
-    
+
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
       if (error) {
         // display the error to the user
@@ -44,10 +44,10 @@ Template.postEdit.events({
       }
     });
   },
-  
+
   'click .delete': function(e) {
     e.preventDefault();
-    
+
     if (confirm("Delete this post?")) {
       var currentPostId = this._id;
       Posts.remove(currentPostId);
