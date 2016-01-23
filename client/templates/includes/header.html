@@ -7,16 +7,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{pathFor 'home'}}">Microscope</a>
+      <a class="navbar-brand" href="{{pathFor 'home'}}">Porquinhos</a>
     </div>
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         <li class="{{activeRouteClass 'home' 'newPosts'}}">
-          <a href="{{pathFor 'newPosts'}}">New</a>
+          <a href="{{pathFor 'newPosts'}}">Novo Porquinho</a>
         </li>
         <li class="{{activeRouteClass  'bestPosts'}}">
           <a href="{{pathFor 'bestPosts'}}">Best</a>
-        </li>
+        </li> 
         {{#if currentUser}}
           <li class="{{activeRouteClass 'postSubmit'}}">
             <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
@@ -24,13 +24,13 @@
           <li class="dropdown">
             {{> notifications}}
           </li>
-        {{/if}}
+        {{/if}} 
 
         <li><a href="{{pathFor route='home'}}">Home</a></li>
         {{#if currentUser}}
            <li><a href="#" class="logout">Logout</a></li>
         {{else}}
-           <li><a href="{{pathFor route='register'}}">Register</a></li>
+           <li><a href="{{pathFor route='register'}}">Cadastre-se</a></li>
            <li><a href="{{pathFor route='login'}}">Login</a></li>
         {{/if}}
 
