@@ -5,6 +5,7 @@ Template.register.events({
         var email = $('[name=email]').val();
         var password = $('[name=password]').val();
         Accounts.createUser({
+            username: name,
             email: email,
             password: password
         }, function(error){
@@ -13,6 +14,6 @@ Template.register.events({
             } else {
               Router.go("home"); // Redirect user if registration succeeds
             }
-        }); 
+        });
     }
 });

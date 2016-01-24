@@ -24,3 +24,8 @@ accounts-password
 ian:accounts-ui-bootstrap-3
 check
 audit-argument-checks
+service-configuration
+accounts-base
+accounts-google
+accounts-facebook
+email
