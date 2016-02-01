@@ -31,6 +31,7 @@ accounts-facebook
 email
 
 ############Template
+autopublish
 less
 fortawesome:fontawesome
 zimme:iron-router-active
@@ -38,6 +39,9 @@ okgrow:router-autoscroll
 dbarrett:dropzonejs
 
 twbs:bootstrap@3.3.6
+
+
+
 
 logging
 reload

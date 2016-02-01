@@ -2,16 +2,16 @@ Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
   notFoundTemplate: 'notFound',
-  waitOn: function() {
+  waitOn: function() { 
     return [Meteor.subscribe('notifications')]
   }
 });
 
 PostsListController = RouteController.extend({
   template: 'postsList',
-  increment: 5,
-  postsLimit: function() {
-    return parseInt(this.params.postsLimit) || this.increment;
+  increment: 5, 
+  postsLimit: function() { 
+    return parseInt(this.params.postsLimit) || this.increment; 
   },
   findOptions: function() {
     return {sort: this.sort, limit: this.postsLimit()};
@@ -50,10 +50,8 @@ BestPostsController = PostsListController.extend({
 });
 
 Router.route('/', {
-
   name: 'home',
   controller: NewPostsController
-
 });
 
 Router.route('/new/:postsLimit?', {name: 'newPosts'});
@@ -74,37 +72,13 @@ Router.route('/posts/:_id', {
 
 Router.route('/posts/:_id/edit', {
   name: 'postEdit',
-  waitOn: function() {
+  waitOn: function() { 
     return Meteor.subscribe('singlePost', this.params._id);
   },
   data: function() { return Posts.findOne(this.params._id); }
 });
 
 Router.route('/submit', {name: 'postSubmit'});
-
-Router.route('/dashboard4', {
-  name: 'dashboard4',
-  controller: NewPostsController,
-  layoutTemplate: 'layout2',
-  //render: forumView
-
-});
-
-Router.route('/forumView',{
-  name:'forumView',
-  layoutTemplate: 'layout2'
-
-});
-Router.route('/projects',{
-  name:'projects',
-  layoutTemplate: 'layout2'
-
-});
-
-Router.route('/formWizard',{
-  name:'formWizard',
-  layoutTemplate: 'layout2'
-});
 
 Router.route('/login', function () {
     this.render('login');

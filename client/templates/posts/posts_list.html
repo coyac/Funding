@@ -1,17 +1,41 @@
 <template name="postsList">
-  <div class="posts page">
-    <div class="wrapper">
-      {{#each posts}}
-        {{> postItem}}
-      {{/each}}
-    </div>
-    
-    {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">Load more</a>
-    {{else}}
-      {{#unless ready}}
-        {{> spinner}}
-      {{/unless}}
-    {{/if}}
+  <!-- Page heading -->
+  {{> pageHeading title='Porkinhos' category='App views' }}
+
+  <div class="wrapper wrapper-content animated fadeInUp">
+
+      <div class="ibox">
+          <div class="ibox-title">
+              <h5>Os seus Porkinhos</h5>
+              <div class="ibox-tools">
+                  <a href="{{pathFor 'postSubmit'}}" class="btn btn-primary btn-xs">Criar Porkinho</a>
+              </div>
+          </div>
+          <div class="ibox-content">
+              <div class="row m-b-sm m-t-sm">
+                  <div class="col-md-1">
+                      <button type="button" id="loading-example-btn" class="btn btn-white btn-sm" ><i class="fa fa-refresh"></i> Refresh</button>
+                  </div>
+                  <div class="col-md-11">
+                      <div class="input-group"><input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                      <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span></div>
+                  </div>
+              </div>
+              {{#each posts}}
+                {{> postItem}}
+              {{/each}}
+
+            {{#if nextPath}}
+              <a class="load-more" href="{{nextPath}}">Load more</a>
+            {{else}}
+              {{#unless ready}}
+                {{> spinner}}
+              {{/unless}}
+            {{/if}}
+
+          </div>
+      </div>
   </div>
+
+
 </template>
