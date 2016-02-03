@@ -1,0 +1,127 @@
+<template name="formWizard">
+
+
+    <!-- Page heading -->
+    {{> pageHeading title='Wizard' category='Forms' }}
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Vaquinhas fáceis e gratuitas</h5>
+                        {{>iboxTools}}
+                    </div>
+                    <div class="ibox-content">
+                    <h2>Criar Porkinho</h2>
+                        <div id="wizard">
+                            <h1>Criar</h1>
+                            <div class="step-content">
+                            <div class="ibox-content">
+                            <fieldset>
+                                <h2>1 - Criar Porkinhos</h2>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="form-group">
+                                            <label>Nome do Porkinho *</label>
+                                            <input id="PorkName" name="PorkName" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Escolha o tipo de evento*</label>
+                                            <input id="EventType" name="EventType" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Adicione a data*</label>
+                                            <input id="FinalDate" name="FinalDate" type="text" class="form-control required">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="text-center">
+                                            <div style="margin-top: 20px">
+                                                <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                                </div>
+                            </div>
+
+                            <h1>Personalizar</h1>
+                            <div class="step-content">
+                            <div class="ibox-content">
+                            <fieldset>
+                                <h2>2 - Personalize o seu Porkinho</h2>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="form-group">
+                                            <label>Escolha um icon ou insira uma fotografia</label>
+                                            <input id="ImagePork" name="ImagePork" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Escreva uma descrição</label>
+                                            <input id="PorkDescription" name="PorkDescription" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Entre com o valor total para atingir o seu objetivo</label>
+                                            <input id="TotalValue" name="TotalValue" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Sugerir montante por participante</label>
+                                            <input id="SuggestedValue" name="SuggestedValue" type="text" class="form-control required">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="text-center">
+                                            <div style="margin-top: 20px">
+                                                <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                            </fieldset>
+                                </div>
+                            </div>
+
+                            <h1>Partilhar</h1>
+                            <div class="step-content">
+                            <div class="ibox-content">
+                            <fieldset>
+                                <h2>3 - Partilhe o seu Porkinho</h2>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="form-group">
+                                            <label>Insira o email dos participantes</label>
+                                            <input id="UsersEmail" name="UsersEmail" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Partilhe o link</label>
+                                            <input id="ShareLink" name="ShareLink" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Como deseja que os seus amigos o paguem</label>
+                                            <input id="PaymentType" name="PaymentType" type="text" class="form-control required">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="text-center">
+                                            <div style="margin-top: 20px">
+                                                <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                            </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</template>

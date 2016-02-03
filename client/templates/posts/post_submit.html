@@ -1,0 +1,98 @@
+<template name="postSubmit">
+  <form class="main form page">
+    <h3>Criar Porquinhos</h3>
+    <div class="form-group {{errorClass 'NomePork'}}">
+      <label class="control-label" for="NomePork">Nome do Seu Porkinho</label>
+      <div class="controls">
+          <input name="NomePork" id="NomePork" type="text" value\ placeholder="Your URL" class="form-control"/>
+          <span class="help-block">{{errorMessage 'url'}}</span>
+      </div>
+    </div>
+
+        <div class="form-group {{errorClass 'NomeBenef'}}">
+      <label class="control-label" for="NomeBenef">Nome do Beneficiario</label>
+      <div class="controls">
+          <input name="NomeBenef" id="NomeBenef" type="text" value="" placeholder="Your URL" class="form-control"/>
+          <span class="help-block">{{errorMessage 'url'}}</span>
+      </div>
+    </div>
+
+        <div class="form-group {{errorClass 'EventType'}}">
+      <label class="control-label" for="EventType">Escolha o tipo de evento</label>
+      <div class="controls">
+          <input name="EventType" id="EventType" type="text" value="" placeholder="Your URL" class="form-control"/>
+          <span class="help-block">{{errorMessage 'url'}}</span>
+      </div>
+    </div>
+
+    <div class="form-group {{errorClass 'FinalDate'}}">
+      <label class="control-label" for="FinalDate">Adicione a data de fim</label>
+      <div class="controls">
+          <input name="FinalDate" id="FinalDate" type="numbers" value="" placeholder="Name your post" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+
+        <h3>Personalise o seu Porquinhos</h3>
+
+    <div class="form-group {{errorClass 'ImagePork'}}">
+      <label class="control-label" for="ImagePork">Escolha um icon ou insira uma fotografia</label>
+      <div class="controls">
+          <input name="ImagePork" id="ImagePork" type="text" value="" placeholder="Name your post" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+
+    <div class="form-group {{errorClass 'PorkDescription'}}">
+      <label class="control-label" for="PorkDescription">Escreva uma descrição</label>
+      <div class="controls">
+          <input name="PorkDescription" id="PorkDescription" type="text" value="" placeholder="Name your post" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+
+        <div class="form-group {{errorClass 'TotalValue'}}">
+      <label class="control-label" for="TotalValue">Entre com o valor total para atingir o seu objetivo</label>
+      <div class="controls">
+          <input name="TotalValue" id="TotalValue" type="numbers" value="" placeholder="Name your post" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+
+        <div class="form-group {{errorClass 'SuggestedValue'}}">
+      <label class="control-label" for="SuggestedValue">Sugerira um montante por participante</label>
+      <div class="controls">
+          <input name="SuggestedValue" id="SuggestedValue" type="numbers" value="" placeholder="Name your post" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+
+        <h3>Partilhe o seu Porquinhos</h3>
+
+    <div class="form-group {{errorClass 'UsersEmail'}}">
+      <label class="control-label" for="UsersEmail">Insira o email dos participantes</label>
+      <div class="controls">
+          <input name="UsersEmail" id="UsersEmail" type="text" value="" placeholder="Name your post" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+
+    <div class="form-group {{errorClass 'ShareLink'}}">
+      <label class="control-label" for="ShareLink">Partilhe o link do seu Porquinho</label>
+      <div class="controls">
+          <input name="ShareLink" id="ShareLink" type="text" value="" placeholder="Name your post" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+
+        <div class="form-group {{errorClass 'PaymentType'}}">
+      <label class="control-label" for="PaymentType">Como deseja que os seus amigos o paguem? (Vai haver opções)</label>
+      <div class="controls">
+          <input name="PaymentType" id="PaymentType" type="text" value="" placeholder="Name your post" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  </form>
+</template>
