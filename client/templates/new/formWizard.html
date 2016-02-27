@@ -1,25 +1,30 @@
 <template name="formWizard">
-​
-​
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
     <!-- Page heading -->
     {{> pageHeading title='Wizard' category='Forms' }}
-​
+
     <div class="wrapper wrapper-content animated fadeInRight">
+        
         <div class="row">
             <div class="col-lg-12">
-                <div class="ibox float-e-margins">
+                <div class="ibox">
                     <div class="ibox-title">
-                        <h5>Vaquinhas fáceis e gratuitas</h5>
+                        <h5>Wizard with Validation</h5>
                         {{>iboxTools}}
                     </div>
                     <div class="ibox-content">
-                    <h2>Criar Porkinho</h2>
-                        <div id="wizard">
+                        <h2>
+                            Validation Wizard Form
+                        </h2>
+                        <p>
+                            This example show how to use Steps with jQuery Validation plugin.
+                        </p>
+
+                        <form id="form" action="#" class="wizard-big">
                             <h1>Criar</h1>
-                            <div class="step-content">
-                            <div class="ibox-content">
                             <fieldset>
-                                <h2>1 - Criar Porkinhos</h2>
+                                <h2>Criar Porkinhos</h2>
                                 <div class="row">
                                     <div class="col-lg-8">
                                         <div class="form-group">
@@ -43,18 +48,13 @@
                                         </div>
                                     </div>
                                 </div>
-​
+
                             </fieldset>
-                                </div>
-                            </div>
-​
-                            <h1>Personalizar</h1>
-                            <div class="step-content">
-                            <div class="ibox-content">
+                            <h1>Profile</h1>
                             <fieldset>
-                                <h2>2 - Personalize o seu Porkinho</h2>
+                                <h2>Personalizar</h2>
                                 <div class="row">
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Escolha um icon ou insira uma fotografia</label>
                                             <input id="ImagePork" name="ImagePork" type="text" class="form-control required">
@@ -63,6 +63,8 @@
                                             <label>Escreva uma descrição</label>
                                             <input id="PorkDescription" name="PorkDescription" type="text" class="form-control required">
                                         </div>
+                                    </div>
+                                    <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Entre com o valor total para atingir o seu objetivo</label>
                                             <input id="TotalValue" name="TotalValue" type="text" class="form-control required">
@@ -72,56 +74,42 @@
                                             <input id="SuggestedValue" name="SuggestedValue" type="text" class="form-control required">
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="text-center">
-                                            <div style="margin-top: 20px">
-                                                <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                            </fieldset>
                                 </div>
-                            </div>
-​
+                            </fieldset>
+
                             <h1>Partilhar</h1>
-                            <div class="step-content">
-                            <div class="ibox-content">
                             <fieldset>
-                                <h2>3 - Partilhe o seu Porkinho</h2>
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <div class="form-group">
-                                            <label>Insira o email dos participantes</label>
-                                            <input id="UsersEmail" name="UsersEmail" type="text" class="form-control required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Partilhe o link</label>
-                                            <input id="ShareLink" name="ShareLink" type="text" class="form-control required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Como deseja que os seus amigos o paguem</label>
-                                            <input id="PaymentType" name="PaymentType" type="text" class="form-control required">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="text-center">
-                                            <div style="margin-top: 20px">
-                                                <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
+                              <h2>3 - Partilhe o seu Porkinho</h2>
+                              <div class="row">
+                                  <div class="col-lg-6">
+                                      <div class="form-group">
+                                        <label>Insira o email dos participantes</label>
+                                        <input id="UsersEmail" name="UsersEmail" type="text" class="form-control required">
+                                     </div>
+                                     <div class="form-group">
+                                         <label>Partilhe o link</label>
+                                         <input id="ShareLink" name="ShareLink" type="text" class="form-control required">
+                                     </div>
+                                     <div class="form-group">
+                                               <label>Como deseja que os seus amigos o paguem</label>
+                                               <input id="PaymentType" name="PaymentType" type="text" class="form-control required">
+                                     </div>
+
+                                 </div>
+                               </div>
                             </fieldset>
-                                </div>
-                            </div>
-                        </div>
-​
+
+                            <h1>Finish</h1>
+                            <fieldset>
+                                <h2>Terms and Conditions</h2>
+                                <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
-​
+
 </template>
