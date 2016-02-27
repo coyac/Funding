@@ -2,12 +2,13 @@ Template.formWizard.rendered = function(){
 
     // Initialize steps plugin
     $("#wizard").steps();
-
+    console.log("I set this in the constructor -- OLEEE");
     $("#form").steps({
         bodyTag: "fieldset",
         onStepChanging: function (event, currentIndex, newIndex)
         {
             // Always allow going backward even if the current step contains invalid fields!
+            console.log("I set this in the constructor -- teste1");
             if (currentIndex > newIndex)
             {
                 return true;
@@ -31,7 +32,7 @@ Template.formWizard.rendered = function(){
 
             // Disable validation on fields that are disabled or hidden.
             form.validate().settings.ignore = ":disabled,:hidden";
-
+            console.log("I set this in the constructor -- ola");
             // Start validation; Prevent going forward if false
             return form.valid();
         },
@@ -42,7 +43,7 @@ Template.formWizard.rendered = function(){
             {
                 $(this).steps("next");
             }
-
+            console.log("I set this in the constructor -- olaola");
             // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
             if (currentIndex === 2 && priorIndex === 3)
             {
@@ -65,18 +66,9 @@ Template.formWizard.rendered = function(){
             var form = $(this);
 
             // Submit form input
-            form.submit();
-        }
-    }).validate({
-        errorPlacement: function (error, element)
-        {
-            element.before(error);
-        },
-        rules: {
-            confirm: {
-                equalTo: "#password"
-            }
+            //form.submit();
+            console.log("I set this in the constructor -- all finished");
+            alert("Submitted!");
         }
     });
-
 };
